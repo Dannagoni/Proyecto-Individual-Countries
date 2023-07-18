@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
-import { searchName } from "../../Redux/actions";
+import { filterCountries, searchName } from "../../Redux/actions";
 import styled from './searchBar.module.css'
 
 // const SearchBar = () => {
@@ -33,7 +33,9 @@ const SearchBar = () => {
     }
 
     const handleClick = () => {
-        dispatch(searchName(name))
+        if(name.trim().length){
+            dispatch(searchName(name))
+        }
     }
 
     return (

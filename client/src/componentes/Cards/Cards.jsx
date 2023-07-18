@@ -24,7 +24,7 @@ const paginado = () => {
         const allThecountries = countries.length;
         const nextPage = currentPage + 1
         const firstIndex = currentPage === 0 ? countriesItems.length - 1 : (nextPage * NUM_ITEMS) - 1
-        if (firstIndex === allThecountries) return;
+        if (firstIndex + 1 === allThecountries) return
         setCountriesItems([...countries.slice(firstIndex, firstIndex + NUM_ITEMS)])
         setCurrentPage(nextPage)
     }

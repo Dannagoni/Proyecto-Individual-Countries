@@ -41,8 +41,8 @@
 }
 
 .containerform {
-    background-image: url('../images/form.jpg');
-    /* background-image: url('../images/fondoParaForm.jpg'); */
+    /* background-image: url('../images/form.jpg'); */
+    background-image: url('../images/fondoParaForm.jpg');
 
     height: 100vh;
     background-size: cover;

@@ -16,7 +16,7 @@ function DetailPage() {
     }, [dispatch])
 
     return countryDetail && (
-        <div>
+        <div className={styled.background}>
             <NavBar />
             <div>
                 <img className={styled.image} src={countryDetail.flag} alt={countryDetail.flag} />

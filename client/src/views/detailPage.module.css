@@ -7,5 +7,14 @@
 .image{
     position: absolute;
     left: 30%;
-    top: 40%
+    top: 40%;
+}
+
+.background{
+    background-image: url('../images/form.jpg');
+    height: 100vh;
+    background-size: cover;
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    -moz-filter: brightness(90%);
 }

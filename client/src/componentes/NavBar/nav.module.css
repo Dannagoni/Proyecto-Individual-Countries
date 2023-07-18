@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: rgb(6, 6, 49)
+}
+.buttonHome{
+    position: absolute;
+    top: 5px;
+    left: 80%;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.buttonForm{
+    position: absolute;
+    top: 5px;
+    left: 90%;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.searchBar{
+    display: flex;
+}

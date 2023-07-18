@@ -1,0 +1,15 @@
+.background {
+    /* background-image: url('../images/imagenDeLoading.jpg'); */
+    background-image: url('../images/fondo1.png');
+    height: 100vh;
+    background-size: cover;
+    filter: contrast(110%);
+}
+.button{
+    position: absolute;
+    left: 46%;
+    top:60%;
+    height: 50px;
+    width: 100px;
+    Text-decoration: none;
+}

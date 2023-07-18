@@ -1,0 +1,14 @@
+.filterBycontinents{
+    background-color: rgb(224, 151, 250);
+    border-radius: 150px;
+}
+
+.filterByOrder{
+    background-color: rgb(92, 214, 255);
+    border-radius: 150px;
+}
+
+.filterByActivity{
+    background-color: rgba(0, 181, 42, 0.559);
+    border-radius: 150px;
+}

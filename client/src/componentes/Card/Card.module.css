@@ -1,0 +1,44 @@
+.containerprincipal{
+    background-color: rgb(6, 6, 49)
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 300px;
+    padding: 1mm;
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: rgb(238, 192, 255);
+    /* background-color: rgb(213, 223, 255); */
+    margin:15px
+}
+
+.image{
+    width: 100%;
+    height: 60%;
+    border-radius: 100%;
+    justify-content: center;
+
+}
+
+.imageTierraLogo{
+    background-image: url('../../images/tierraLogoaaa.png');
+}
+
+.h2Country{
+    font-size: 15px;
+    margin-top: 0px;
+}
+.h2Name{
+    font-size: 25px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.h2Continent{
+    margin-bottom: -5px;
+}

@@ -1,0 +1,36 @@
+.container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.titlePage {
+    position: absolute;
+    left: 45%;
+    top:860px
+}
+
+.buttonPrevious{
+    position: absolute;
+    left: 39%;
+    height: 40px;
+    width: 100px;
+    top:880px
+}
+.buttonNext{
+    position: absolute;
+    left: 47%;
+    height: 40px;
+    width: 100px;
+    top:880px
+}
+/* .imagePlane{
+    position:absolute;  
+    width: 500px;
+    height: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */

@@ -1,0 +1,61 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+
+
+}
+
+.inputsContainer {
+    display: flex;
+    margin-block: 10px
+}
+
+/* .input {
+    margin-left: 10px;
+} */
+.errorMessage {
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgb(176, 29, 29)
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* margin-top: 200px;
+    background-color: aqua; */
+
+
+}
+
+.button {
+    height: 40px;
+    width: 130px;
+    font-size: 25px;
+}
+
+.containerform {
+    background-image: url('../images/form.jpg');
+    /* background-image: url('../images/fondoParaForm.jpg'); */
+
+    height: 100vh;
+    background-size: cover;
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    -moz-filter: brightness(90%);
+}
+
+.container {
+    background-color: aqua;
+    padding: 100px;
+    margin-right: 600px;
+    margin-left: 600px;
+    margin-top: 100px;
+    border-radius: 15px;
+}

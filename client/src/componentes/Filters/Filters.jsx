@@ -40,7 +40,7 @@ const Filters = () => {
 
 
     return (
-        <div>
+        <div className={styled.container}>
             <select className={styled.filterBycontinents} defaultValue='AllCountries'onChange={(event) => handleFilterContinent(event)}>
                 {continents.map(continent => {
                     return <option key={continent} value={continent}>{continent}</option>

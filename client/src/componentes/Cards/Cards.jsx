@@ -52,8 +52,8 @@ const paginado = () => {
                 ))}
             </div>
             <h1 className={styled.titlePage}>{currentPage}</h1>
-            <button className={styled.buttonPrevious} onClick={previousHandler}>previous</button>
-            <button className={styled.buttonNext} onClick={nextHandler}>next</button>
+            <button className={styled.buttonPrevious} onClick={previousHandler}>◀</button>
+            <button className={styled.buttonNext} onClick={nextHandler}>▶</button>
         </div>
     )
 }

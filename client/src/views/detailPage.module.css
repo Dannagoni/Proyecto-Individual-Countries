@@ -1,15 +1,22 @@
+.container{
+    display: grid;
+    place-items: center;
+    background-color: rgba(196, 219, 255, 0.629);
+    flex-wrap: wrap;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 85px;
+    box-shadow: 0px 5px 25px #000000;
+    font-size: 17px;
+    
 
-.containerH2{
-    position: absolute;
-    left: 60%;
-    top:30%;
 }
+
 .image{
-    position: absolute;
-    left: 30%;
-    top: 40%;
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
 }
-
 .background{
     background-image: url('../images/form.jpg');
     height: 100vh;
@@ -18,3 +25,11 @@
     -webkit-filter: brightness(90%);
     -moz-filter: brightness(90%);
 }
+/* .container{
+    display: grid;
+    place-items: center;
+    flex-direction: row-reverse;
+    background-color: aqua;
+
+} */
+

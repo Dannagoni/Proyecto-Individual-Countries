@@ -11,7 +11,10 @@
 
 .inputsContainer {
     display: flex;
-    margin-block: 10px
+    margin-block: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 30px;
 }
 
 /* .input {
@@ -28,13 +31,19 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    color: rgb(3, 182, 213);
+    font-size: 38px;
+    ;
     /* margin-top: 200px;
     background-color: aqua; */
 
 
 }
 
+
 .button {
+    display: flex;
+    margin-block: 10px;
     height: 40px;
     width: 130px;
     font-size: 25px;
@@ -42,8 +51,7 @@
 
 .containerform {
     /* background-image: url('../images/form.jpg'); */
-    background-image: url('../images/fondoParaForm.jpg');
-
+    background-image: url('../images/fondoForm6.jpg');
     height: 100vh;
     background-size: cover;
     filter: brightness(90%);
@@ -52,10 +60,31 @@
 }
 
 .container {
-    background-color: aqua;
-    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.428);
+    padding-top: 10px;
     margin-right: 600px;
-    margin-left: 600px;
-    margin-top: 100px;
+    margin-left: 800px;
+    margin-top: 200px;
     border-radius: 15px;
+    
 }
+
+.logo{
+    display: flex;
+    margin-top: -15px;
+    margin-bottom: -40px;
+    background-color: transparent;
+    border: transparent;
+    z-index: 5;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* .labelSeason{
+    color:white
+}
+.optionSeason{
+    display: flex;
+    height: 50px;
+    width: 200px;
+} */

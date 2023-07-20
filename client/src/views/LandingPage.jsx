@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from './landingPage.module.css'
 
 const LandingPage = () => {
@@ -6,7 +6,7 @@ const LandingPage = () => {
     return (
         <div className={styled.background}>
             <button className={styled.button}>
-                <NavLink to='/home'>Explore</NavLink>
+                <Link className={styled.link} to='/home'>EXPLORE</Link>
             </button>
         </div>
     )

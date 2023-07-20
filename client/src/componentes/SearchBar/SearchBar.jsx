@@ -35,6 +35,8 @@ const SearchBar = () => {
     const handleClick = () => {
         if(name.trim().length){
             dispatch(searchName(name))
+        } else {
+            alert('this country does not exist')
         }
     }
 

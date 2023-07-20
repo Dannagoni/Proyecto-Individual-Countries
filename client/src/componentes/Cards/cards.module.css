@@ -1,27 +1,39 @@
 .container {
-    background-color: transparent;
     display: flex;
     flex-direction: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-between;
+    margin-left: 190px;
+    margin-right: 200px;
+    gap: 45px;
+    margin-bottom: 20px; 
+    margin-top: 40px;
 }
 
 .titlePage {
     position: absolute;
     left: 45%;
-    top:860px
+    top:860px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: rgb(6, 6, 49);
+    color:white;
 }
 
 .buttonPrevious{
     position: absolute;
-    left: 39%;
+    font-size: 20px;
+    left: 764px;
     height: 40px;
     width: 100px;
+    /* background-color: transparent; */
     top:880px
 }
 .buttonNext{
     position: absolute;
-    left: 47%;
+    /* background-color: transparent; */
+    font-size: 20px;
+    left: 940px;
     height: 40px;
     width: 100px;
     top:880px

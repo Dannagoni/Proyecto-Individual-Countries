@@ -1,12 +1,14 @@
 .container{
     position: absolute;
     top: 10px;
-    left: 40%;
+    left: 36%;
+    box-shadow: 0 0 40px #000000;
 }
 .input{
     border-radius: 40px;
     width: 400px;
     height: 30px;
+    font-size: 20px;
 }
 .button{
     border-radius: 40px;

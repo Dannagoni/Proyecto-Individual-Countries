@@ -38,7 +38,7 @@ function FormPage() {
             setErrors(validations.errors)
         } else {
             dispatch(addActivity(inputs))
-            alert('Has creado tu actividad con exito')
+            alert('¡You have created your activity successfully!')
             navigate('/home')
         }
     }
@@ -54,7 +54,8 @@ function FormPage() {
             {/* <div className={styled.imageForm} style={{ backgroundImage: `url(${imageSrcForm})` }}></div> */}
             <div className={styled.container}>
             <div className={styled.container2}>
-            <h1 className={styled.title}>CREATE YOUR ACTIVITY!</h1>
+            <h1 className={styled.logo}>🌐</h1>
+            <h1 className={styled.title}>¡CREATE YOUR ACTIVITY!</h1>
             <form onSubmit={submitHandler} className={styled.form}>
                 <div className={styled.inputsContainer}>
                 <label htmlFor="name">Name:</label>
@@ -62,9 +63,9 @@ function FormPage() {
                 </div>
                 {errors.name && <p className={styled.errorMessage}>{errors.name}</p>}
                 <div className={styled.inputsContainer}>
-                <label htmlFor="season">Season:</label>
+                <label className={styled.labelSeason} htmlFor="season">Season:</label>
                 <select name="season" defaultValue="none" onChange={handleChange} id="season">
-                <option value="none" disabled hidden>Select an Option</option>
+                <option className={styled.optionSeason}value="none" disabled hidden>Select an Option</option>
                     {seasons.map(season => {
                         return <option key={season} value={season}>{season}</option>
                     })}
@@ -73,7 +74,7 @@ function FormPage() {
                 {errors.season && <p className={styled.errorMessage}>{errors.season}</p>}
 
                 <div className={styled.inputsContainer}>
-                <label htmlFor="countriesIds">Countries:</label>
+                <label className = {styled.labelCountries}htmlFor="countriesIds">Countries:</label>
                 <select  name='countriesIds' onChange={handleChange} id="countriesIds" multiple>
                     {countries.sort((a,b) => a.name.localeCompare(b.name)).map(country => {
                         return <option key={country.name} value={country.id}>{country.name}</option>

@@ -2,26 +2,72 @@
     display: flex;
     flex-direction: row;
     height: 50px;
+    /* box-shadow: 0 0 15px #000000;    */
     background-color: rgb(6, 6, 49)
 }
-.buttonHome{
+
+.buttonHome {
     position: absolute;
     top: 5px;
     left: 80%;
     height: 40px;
-    width: 100px;
+    width: 90px;
     border-radius: 15px;
     text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: white;
 }
-.buttonForm{
+
+.buttonHome:hover {
+    background-color: #ff0000; /* Color del fondo al pasar el mouse */
+    color: #ffffff; 
+}
+
+.buttonForm {
     position: absolute;
     top: 5px;
     left: 90%;
     height: 40px;
-    width: 100px;
+    width: 90px;
     border-radius: 15px;
-    text-decoration: none;
+    border: white
 }
-.searchBar{
+
+.linkHome {
+    text-decoration: none;
+    color: rgb(6, 6, 49)
+}
+
+.linkForm {
+    text-decoration: none;
+    font-size: 15px, ;
+    color: rgb(6, 6, 49)
+}
+
+.searchBar {
     display: flex;
+}
+
+.title {
+    position: absolute;
+    top: -35px;
+    font-size: 40px;
+    color: white
+}
+
+.buttonBack {
+    position: absolute;
+    background-color: transparent;
+    left: 350px;
+    top: -38px;
+    font-size: 40px;
+}
+
+.buttonRestart {
+    position: absolute;
+    background-color: transparent;
+    left: 430px;
+    top: -38px;
+    font-size: 40px;
 }

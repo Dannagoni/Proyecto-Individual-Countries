@@ -7,7 +7,7 @@ const countriesRouter = Router();
 
 countriesRouter.get('/countries', handlerGetCountries);//TODOS LOS PAISES
 
-countriesRouter.get('/countries/name', handlerGetCountryByName);
+// countriesRouter.get('/countries/name', handlerGetCountryByName);
 
 countriesRouter.get('/countries/:id', handlerGetCountryById);
 

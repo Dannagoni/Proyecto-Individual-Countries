@@ -2,14 +2,16 @@ import Cards from "../componentes/Cards/Cards";
 import Filters from "../componentes/Filters/Filters";
 import styled from './homePage.module.css'
 import NavBar from "../componentes/NavBar/NavBar";
-import Paginado from "../componentes/Paginado/Paginado"
+import { useState } from "react";
 
 function HomePage() {
-
+    const [selectedFilters, setSelectedFilters] = useState({ continent: 'AllCountries', orderAlphabetic: '', orderByPopulation: '', activityId: '' })
+    // Estoy guardando lo que el usuario va seleccionando para despues filtrar por todos juntos en simultaneo.
+    
     return (
         <div className={styled.background} >
-            <NavBar/>
-            <Filters/>
+            <NavBar setSelectedFilters={setSelectedFilters}/>
+            <Filters selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters}/>
             {/* <Paginado/> */}
             <Cards/>
 

@@ -2,7 +2,7 @@ const { Country, Activity } = require('../db')
 
 const postActivities = async (data, countriesIds) => {
   //Crea actividad
-  const newActivity = await Activity.create(data);
+  const newActivity = await Activity.create(data);//(validation)
 
   try {
     // Itera los paises y los agrega/linkea a la actividad

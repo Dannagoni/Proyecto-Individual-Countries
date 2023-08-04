@@ -1,42 +1,111 @@
-.container{
+.container {
     display: grid;
-    place-items:center;
+    place-items: center;
     background-color: #00000059;
     /* border-top: 1px solid rgb(194, 194, 194); */
     /* border-bottom: 1px solid rgb(194, 194, 194); */
     /* box-shadow: 0px 0px 10px #000000; */
 }
-.filterBycontinents{
+
+.filterBycontinents {
     position: absolute;
-    left: 600px;
-    font-size: 18px;
+    left: 540px;
+    font-size: 15px;
     background-color: rgb(120, 183, 232);
     border-color: rgb(71, 153, 215);
     height: 30px;
-    width: 200px;
+    width: 150px;
     margin: 10px;
     box-shadow: 0 0 10px #000000;
 }
 
-.filterByOrder{
-    font-size: 18px;
-    background-color: rgb(120, 183, 232);
-    border-color: rgb(71, 153, 215);
-    height: 30px;
-    width: 200px;
-    margin: 10px;
-    box-shadow: 0 0 10px #000000;
-}
-
-.filterByActivity{
+.filterByOrderAlphabetic {
     position: absolute;
-    right: 600px;
-    font-size: 18px;
+    left:700px; 
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 160px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.filterByActivity {
+    position: absolute;
+    right: 690px;
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 170px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+
+}
+.filterByOrderPopulation{
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 160px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+/* .container {
+    display: grid;
+    place-items: center;
+    background-color: #00000059;
+    margin-left: 210px;
+    /* border-top: 1px solid rgb(194, 194, 194); */
+    /* border-bottom: 1px solid rgb(194, 194, 194); */
+    /* box-shadow: 0px 0px 10px #000000; */
+/* } */
+
+/* .filterBycontinents {
+    position: absolute;
+    left: 450px;
+    font-size: 15px;
     background-color: rgb(120, 183, 232);
     border-color: rgb(71, 153, 215);
     height: 30px;
     width: 200px;
     margin: 10px;
     box-shadow: 0 0 10px #000000;
+}
+
+.filterByOrderAlphabetic {
+    position: absolute;
+    right: 480px;
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.filterByActivity {
+
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 200px;
+    box-shadow: 0 0 10px #000000;
 
 }
+
+.filterByOrderPopulation {
+    position: absolute;
+    left: 700px;
+    font-size: 15px;
+    background-color: rgb(120, 183, 232);
+    border-color: rgb(71, 153, 215);
+    height: 30px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+} */ 

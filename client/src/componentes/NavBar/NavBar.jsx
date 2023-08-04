@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom"
 import styled from './nav.module.css'
 import SearchBar from "../SearchBar/SearchBar";
-const NavBar = () => {
+const NavBar = ({ setSelectedFilters}) => {
+
     const location = useLocation()
     return (
         <div className={styled.container}>
@@ -10,7 +11,7 @@ const NavBar = () => {
                 <h2 className={styled.buttonBack}>🔙</h2>
             </Link>
             <Link className={styled.linkHome}to='/home'>
-                <h2 className={styled.buttonRestart}>🔁</h2>
+                {/* <h2 className={styled.buttonRestart}>🔁</h2> */}
             </Link>
             <button className={styled.buttonHome}>
                 <Link className={styled.linkHome}to='/home'>HOME</Link>
@@ -18,7 +19,7 @@ const NavBar = () => {
             <button className={styled.buttonForm}>
                 <Link className={styled.linkForm} to='/form'>FORM</Link>
             </button>
-            <div className={styled.searchBar}>{location.pathname === "/home"  && <SearchBar/>}</div> 
+            <div className={styled.searchBar}>{location.pathname === "/home"  && <SearchBar setSelectedFilters={setSelectedFilters}/>}</div> 
         </div>
     )
 }

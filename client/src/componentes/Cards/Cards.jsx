@@ -6,23 +6,23 @@ import styled from './cards.module.css'
 
 const paginado = () => {
     const NUM_ITEMS = 10
-    const countries = useSelector((state) => state.filteredCountries);
-
+    const countries = useSelector((state) => state.countries);
     const dispatch = useDispatch();
-    useEffect(() => {
-        if (!countries.length) {
-            dispatch(getAllCountries())
-        } else {
-            setCountriesItems([...countries.slice(0, NUM_ITEMS)])
-        }
-    }, [dispatch, countries])
-
     const [countriesItems, setCountriesItems] = useState()
     const [currentPage, setCurrentPage] = useState(0)
+
+    useEffect(() => {
+            dispatch(getAllCountries())
+    }, [dispatch])
+    useEffect(() => {
+            setCountriesItems([...countries.slice(0, NUM_ITEMS)])
+            setCurrentPage(0)
+    }, [countries])
+
     
     const nextHandler = () => {
         const allThecountries = countries.length;
-        const nextPage = currentPage + 1
+        const nextPage = currentPage + 1//3
         const firstIndex = currentPage === 0 ? countriesItems.length - 1 : (nextPage * NUM_ITEMS) - 1
         if (firstIndex + 1 === allThecountries) return
         setCountriesItems([...countries.slice(firstIndex, firstIndex + NUM_ITEMS)])
@@ -50,6 +50,7 @@ const paginado = () => {
                         image={country.flag}
                     />
                 ))}
+                {!countriesItems?.length && <div className={styled.containerAlert}> <h2 className={styled.alert}>No countries matched with selection</h2></div>}
             </div>
             <h1 className={styled.titlePage}>{currentPage}</h1>
             <button className={styled.buttonPrevious} onClick={previousHandler}>◀</button>
@@ -61,5 +62,5 @@ const paginado = () => {
 export default paginado;
 
 
-// cuando selecciono una opcion (selectedContinent) por ej europa me devuelve todos los paises filtrados de europa(filteredCountries)
+// cuando selecciono una opcion (selectedContinent) por ej europa me devuelve todos los paises filtrados de europa(countries)
 //sino me devuelve todos los paises por default

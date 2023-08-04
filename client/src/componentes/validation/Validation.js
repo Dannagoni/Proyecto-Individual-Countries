@@ -2,8 +2,8 @@
 const validation= (inputsData) => {
     const errors = {};
 
-    if(!inputsData.name){
-        errors.name = 'Please, write a name.';
+    if (!/^[A-Za-z]{5,}$/.test(inputsData.name)) {
+        errors.name = 'Please, write a name with 5 or more characters.';
     }
     if(!inputsData.season) {
         errors.season = 'Please, select a season.';

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
-import { filterCountries, searchName } from "../../Redux/actions";
+import { filterCountries, getAllCountries, searchName } from "../../Redux/actions";
 import styled from './searchBar.module.css'
 
 // const SearchBar = () => {
@@ -23,7 +23,7 @@ import styled from './searchBar.module.css'
 
 // export default SearchBar;
 
-const SearchBar = () => {
+const SearchBar = ({setSelectedFilters}) => {
 
     const dispatch = useDispatch();
     const [name, setName] = useState('');
@@ -34,9 +34,10 @@ const SearchBar = () => {
 
     const handleClick = () => {
         if(name.trim().length){
+            setSelectedFilters( { continent: 'AllCountries', orderAlphabetic: '', orderByPopulation: '', activityId: '' })
             dispatch(searchName(name))
         } else {
-            alert('this country does not exist')
+            dispatch(getAllCountries())
         }
     }
 

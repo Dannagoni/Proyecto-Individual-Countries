@@ -5,56 +5,43 @@ import styled from './filters.module.css'
 
 //en filter digo que selecciono el usuario
 //Cards se ocupa de decidir que renderizar cuando pasa tal cosa
-const Filters = () => {
+const Filters = ({selectedFilters, setSelectedFilters}) => {
     const dispatch = useDispatch();
     const continents = ["AllCountries", "Asia", "North America", "South America", "Africa", "Antarctica", "Europe", "Oceania"]
     const activities = useSelector((state) => state.allActivities)
-    const [selectedFilters, setSelectedFilters] = useState({ continent: 'AllCountries', order: '', activity: '' })
-
+    
     useEffect(() => {
         dispatch(getActivities())
     }, [dispatch])
 
-    const handleFilterContinent = (event) => {
+    const handleFilters = (event) => {
+        const property = event.target.name
         const value = event.target.value
-        dispatch(filterCountries({continent: value, activityId: selectedFilters.activity, order: selectedFilters.order}))
-        setSelectedFilters(prevState => { 
-            return { ...prevState, continent: value } 
+        dispatch(filterCountries({ ...selectedFilters, [property]: value})) // filtros que seleccione antes y el que acabo de seleccionar // es lo que va a recibir en la action como payload
+        setSelectedFilters(prevState => {
+            return { ...prevState, [property]: value }
         })
     }
-    const handleFilterOrder = (event) => {
-        const value = event.target.value
-        dispatch(filterCountries({continent: selectedFilters.continent, activityId: selectedFilters.activity, order: value}));
-        setSelectedFilters(prevState => { 
-            return { ...prevState, order: value } 
-        })
-    };
-    const handleFilterActivities = (event) => {
-        const value = event.target.value
-        dispatch(filterCountries({activityId: value, continent: selectedFilters.continent,order: selectedFilters.order})); // activity id
-        setSelectedFilters(prevState => { 
-            return { ...prevState, activity: value } 
-        })
-        //dispatch action filter by activities
-    }
-
 
     return (
         <div className={styled.container}>
-            <select className={styled.filterBycontinents} defaultValue='AllCountries'onChange={(event) => handleFilterContinent(event)}>
+            <select name='continent' className={styled.filterBycontinents} defaultValue='AllCountries' onChange={(event) => handleFilters(event)}>
                 {continents.map(continent => {
                     return <option key={continent} value={continent}>{continent}</option>
                 })}
             </select>
-            <select className={styled.filterByOrder} defaultValue="none" onChange={(event) => handleFilterOrder(event)}>
-                <option value="none" disabled hidden>Select order</option>
-                <option value="Ascendente">Ascendente</option>
-                <option value="Descendente">Descendente</option>
-                <option value="Ascendente de poblacion">Ascendente de poblacion</option>
-                <option value="Descendente de poblacion">Descendente de poblacion</option>
+            <select name='orderAlphabetic' className={styled.filterByOrderAlphabetic} defaultValue="none" onChange={(event) => handleFilters(event)}>
+                <option value="none" disabled hidden>Order by Alphabetic</option>
+                <option value="ASC">Ascendente</option>
+                <option value="DESC">Descendente</option>
             </select>
-            <select className={styled.filterByActivity} defaultValue="none" onChange={(event) => handleFilterActivities(event)}>
-                <option value="none" disabled hidden>Select activity</option>
+            <select name="orderByPopulation" className={styled.filterByOrderPopulation} defaultValue="none" onChange={(event) => handleFilters(event)}>
+                <option value="none" disabled hidden>Order by population</option>
+                <option value="ASC">population ascending</option>
+                <option value="DESC">population descending</option>
+            </select>
+            <select name='activityId' className={styled.filterByActivity} defaultValue="" onChange={(event) => handleFilters(event)}>
+                <option value="" >Select activity</option>
                 {activities?.map(activity => {
                     return <option key={activity.id} value={activity.id}>{activity.name}</option>
                 })}

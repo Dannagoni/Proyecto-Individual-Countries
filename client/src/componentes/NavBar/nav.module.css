@@ -20,7 +20,7 @@
 }
 
 .buttonHome:hover {
-    background-color: #ff0000; /* Color del fondo al pasar el mouse */
+    background-color: #9fdde2; /* Color del fondo al pasar el mouse */
     color: #ffffff; 
 }
 
@@ -31,7 +31,13 @@
     height: 40px;
     width: 90px;
     border-radius: 15px;
-    border: white
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: white;
+}
+
+.buttonForm:hover {
+    background-color: #9fdde2; /* Color del fondo al pasar el mouse */
+    color: #ffffff; 
 }
 
 .linkHome {

@@ -26,7 +26,7 @@ function FormPage() {
         console.log(property)
         const value = event.target.value
         if (property === 'countriesIds') {
-            setInputs({...inputs, [property]: Array.from(event.target.selectedOptions, option => option.value)})
+            setInputs({...inputs, [property]: Array.from(event.target.selectedOptions, option => option.value)})//array from  para convertir las opciones seleccionadas en un array 
         } else {
             setInputs({...inputs,[property]:value})
         }
